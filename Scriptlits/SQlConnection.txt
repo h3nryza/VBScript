@@ -1,0 +1,17 @@
+Set Conn = CreateObject("ADODB.Connection")
+Conn.ConnectionString = "Provider=SQLOLEDB;Data Source=A00W141;Initial Catalog=ClientCallback;user id ='Reportingacc';password='M!CR)s0ft'"
+objQry = "Select * from test"
+Conn.Open
+
+set rs = CreateObject("ADODB.Recordset")
+
+rs.Open objQry,Conn
+
+while NOT rs.EOF
+    for each f in rs.Fields
+
+        wscript.echo f
+
+    Next
+    rs.MoveNext
+Wend

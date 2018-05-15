@@ -1,0 +1,5 @@
+Const DeleteReadOnly=TRUE
+
+Set objFSO=CreateObject("Scripting.FileSystemObject")
+objFSO.DeleteFile("C:\FSO\*"),DeleteReadOnly
+objFSO.DeleteFolder("C:\FSO\*"),DeleteReadOnly
